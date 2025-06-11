@@ -4,6 +4,7 @@ class Product
   include Mongoid::Document
   include Mongoid::Timestamps
   include GlobalID::Identification
+  include Notifications
 
   has_many :subscribers, dependent: :destroy
   field :name, type: String
